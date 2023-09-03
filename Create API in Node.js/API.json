@@ -1,0 +1,65 @@
+{
+  "userList": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "age": 28,
+      "email": "alice@example.com",
+      "address": {
+        "street": "456 Elm Street",
+        "city": "Somewhereville",
+        "state": "NY",
+        "zip": "54321"
+      },
+      "interests": ["Swimming", "Painting", "Traveling"],
+      "isStudent": false,
+      "hasPets": true,
+      "pets": [
+        {
+          "name": "Buddy",
+          "species": "Dog"
+        },
+        {
+          "name": "Fluffy",
+          "species": "Cat"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "age": 35,
+      "email": "bob@example.com",
+      "address": {
+        "street": "789 Oak Avenue",
+        "city": "Nowhereville",
+        "state": "CA",
+        "zip": "98765"
+      },
+      "interests": ["Cycling", "Cooking", "Photography"],
+      "isStudent": true,
+      "hasPets": false
+    },
+    {
+      "id": 3,
+      "name": "Eve Williams",
+      "age": 22,
+      "email": "eve@example.com",
+      "address": {
+        "street": "101 Pine Road",
+        "city": "Anytown",
+        "state": "TX",
+        "zip": "24680"
+      },
+      "interests": ["Reading", "Gardening", "Hiking"],
+      "isStudent": true,
+      "hasPets": true,
+      "pets": [
+        {
+          "name": "Mittens",
+          "species": "Cat"
+        }
+      ]
+    }
+  ]
+}
