@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="form">
+        <textarea name="input" id="input" ></textarea>
+        <button id="btn">Submit</button>
+      </div>
+      <div class="wave-one"></div>
+      <div class="wave-two"></div>
+      <div class="wave-three"></div>
+
+      <div class="weathercon">
+        <i class="fa-regular fa-sun" style=" color:#eccc68"></i>
+      </div>
+      <div class="info">
+        <h2 class="location"><i class="fa-solid fa-street-view"  style=" color:#eccc68"></i>{%location%}, {%country%}</h2>
+        <p id="date">WED | Oct23 |10:23</p>
+        <h1 class="temp">{%tempval%}</h1>
+        <h3 class="tempmin_max">Min {%tempmin%} | Max {%tempmax%}</h3>
+    </div>
+    <script  >
+      const todaysDate = document.getElementById("date");
+const weatherCon = document.getElementById("weathercon");
+const btn = document.getElementById('btn');
+const input = document.getElementById("input").value;
+btn.addEventListener("click",()=>{
+   const x=true; 
+   return x;
+
+})
+
+ 
+
+ 
+
+const tempstatus = "clouds";
+
+const getCurrrentDay = () => {
+  let now = new Date();
+  let day = now.getTime();
+  return day;
+};
+
+const getCurrentTime = () => {
+  const currentTime = new Date();
+  const month = currentTime.getMonth() + 1;
+  const date = currentTime.getDate();
+
+  let hour = currentTime.getHours();
+  let minute = currentTime.getMinutes();
+
+  let period = "AM";
+  if (hour > 11) {
+    period = "PM";
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+  }
+  if (minute < 10) {
+    minute = "0" + minute;
+  }
+  return `${month} ${date} | ${hour}:${minute}${period}
+   `;
+};
+
+const x = getCurrentTime();
+todaysDate.innerText = x;
+
+    </script>
+  </body>
+</html>
